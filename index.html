@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Growtopia Fiki Server</title>
+  <title>Growtopia Fiki Server (GTFS)</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -25,7 +25,7 @@
       font-weight: bold;
     }
     .logo {
-      width: 280px;
+      width: 260px;
       max-width: 90%;
       margin-top: 15px;
       border-radius: 12px;
@@ -68,89 +68,131 @@
     .how-to h3 {
       color: #0088cc;
     }
+    code {
+      background: #eee;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
   </style>
 </head>
 <body>
 
   <header>
     <img src="gtfs.jpg" alt="GTFS Logo" class="logo" />
-    <h1>Growtopia Fiki Server</h1>
+    <h1>Growtopia Fiki Server (GTFS)</h1>
     <nav>
       <a href="#home">Beranda</a>
+      <a href="#how">Cara Bermain</a>
       <a href="#community">Komunitas</a>
       <a href="#download">Download</a>
       <a href="#rules">Peraturan</a>
     </nav>
   </header>
 
+  <!-- HOME -->
   <div class="container" id="home">
     <h2>Selamat Datang di GTFS!</h2>
-    <p>Server Private Growtopia gratis, ringan, dan seru untuk semua pemain Indonesia!</p>
-    
-    <!-- Logo tambahan di bawah teks -->
-    <div style="margin-top:25px;">
-      <img src="gtfs2.jpg" alt="GTFS Logo Bawah" class="logo" />
-    </div>
+    <p>Server Private Growtopia gratis, stabil, dan ringan untuk semua pemain Indonesia!</p>
+    <img src="gtfs2.jpg" alt="GTFS Logo Bawah" class="logo" />
+  </div>
 
-    <!-- Cara Bermain -->
+  <!-- HOW TO PLAY -->
+  <div class="container" id="how">
     <div class="how-to">
-      <h2>🎮 Cara Bermain</h2>
+      <h2>🎮 Cara Bermain GTFS</h2>
 
-      <h3>How to play on Windows:</h3>
+      <!-- WINDOWS -->
+      <h3>🖥️ How to Play on Windows:</h3>
       <ol>
-        <li>Use Growtopia Version New</li>
-        <li>Open Notepad as Administrator lalu buka file <code>hosts</code> di <code>%windir%\System32\drivers\etc</code> dan paste text dari link download.</li>
-        <li>Enter Growtopia as usual.</li>
-        <li>Enjoy 🙂</li>
-      </ol>
-
-      <h3>How to play on Android:</h3>
-      <ol>
-        <li>Use Growtopia Version News.</li>
-        <li>Download Ptunnel </li>
-        <li>Jika menggunakan Ptunnel, paste link ini:  
-          <a href="https://gtpshost.com/raw/GTFS22NOV" target="_blank">https://gtpshost.com/raw/GTFS22NOV</a>
+        <li>Gunakan Growtopia versi terbaru.</li>
+        <li>Buka Notepad sebagai <b>Administrator</b>.</li>
+        <li>Buka file <code>hosts</code> di:
+          <br><code>%windir%\System32\drivers\etc</code>
         </li>
-        <li>Enjoy it 🎉</li>
+        <li>Paste teks ini:
+          <pre>
+103.59.161.68 growtopia1.com
+103.59.161.68 growtopia2.com
+103.59.161.68 www.growtopia1.com
+103.59.161.68 www.growtopia2.com
+          </pre>
+        </li>
+        <li>Simpan → buka Growtopia → selesai 🎉</li>
       </ol>
+
+      <!-- IOS -->
+      <h3>🍎 How to Play on iOS:</h3>
+      <ol>
+        <li>Download <b>Surge 4 / 5</b> dari AppStore.</li>
+        <li>Buka Surge → Click kiri atas.</li>
+        <li>Pilih <b>Edit (Text Mode)</b> lalu paste:
+<pre>
+[General]
+
+[Rule]
+FINAL,DIRECT
+
+[Host]
+www.growtopia2.com = 103.59.161.68
+www.growtopia1.com = 103.59.161.68
+growtopia2.com = 103.59.161.68
+growtopia1.com = 103.59.161.68
+</pre>
+        </li>
+        <li>Click Done → Start.</li>
+        <li>Buka Growtopia dan mainkan 🙂</li>
+      </ol>
+
+      <!-- ANDROID -->
+      <h3>🤖 How to Play on Android (Ptunnel / GoTunnel):</h3>
+      <ol>
+        <li>Gunakan Growtopia versi terbaru.</li>
+        <li>Download PTunnel / GoTunnel.</li>
+        <li>Paste host file GTFS:
+          <br>
+          <a href="https://gtpshost.com/raw/GTFS04DES" target="_blank">
+            https://gtpshost.com/raw/GTFS04DES
+          </a>
+        </li>
+        <li>Start → buka Growtopia → Enjoy 🎉</li>
+      </ol>
+
     </div>
   </div>
 
-  <!-- Bagian Komunitas -->
+  <!-- COMMUNITY -->
   <div class="container" id="community">
     <h2>👥 Komunitas GTFS</h2>
-    <p>Gabung ke grup komunitas resmi kami:</p>
-    <a class="button" href="https://chat.whatsapp.com/KrgtZkXHXvH4SB6ge3GWK7?mode=ac_t" target="_blank">Grup WhatsApp</a>
+    <p>Bergabunglah bersama komunitas resmi kami:</p>
+    <a class="button" href="https://chat.whatsapp.com/KrgtZkXHXvH4SB6ge3GWK7" target="_blank">WhatsApp</a>
     <a class="button" href="https://discord.gg/gee4MbcYxY" target="_blank">Discord</a>
   </div>
 
-  <!-- Bagian Download -->
+  <!-- DOWNLOAD -->
   <div class="container" id="download">
-    <h2>📥 Download Client & Tools</h2>
-    <p>Pilih file yang diperlukan untuk bermain di GTFS:</p>
-     <a class="button" href="https://android.izzysoft.de/repo/apk/io.github.krlvm.powertunnel.android" target="_blank">Download Ptunnel</a>
+    <h2>📥 Download Tools</h2>
+    <p>File penting untuk bermain GTFS:</p>
+
+    <a class="button" href="https://android.izzysoft.de/repo/apk/io.github.krlvm.powertunnel.android" target="_blank">Download Ptunnel</a>
+
+    <a class="button" href="https://gtpshost.com/raw/GTFS04DES" target="_blank">Raw Host GTFS</a>
+
+    <a class="button" href="https://gtpshost.com/d/GTFS04DES" target="_blank">All-in-one Host Link</a>
   </div>
 
+  <!-- RULES -->
   <div class="container" id="rules">
     <h2>📜 Peraturan Server</h2>
     <ul style="text-align:left; max-width: 600px; margin: auto;">
-      <li>Dilarang spam dan scam.</li>
-      <li>Gunakan nama akun yang sopan.</li>
-      <li>Dilarang pakai cheat selain mod client resmi kami.</li>
+      <li>Tidak boleh spam atau scam.</li>
+      <li>Gunakan nama akun sopan.</li>
+      <li>Dilarang menggunakan cheat selain mod resmi GTFS.</li>
     </ul>
   </div>
 
   <footer>
-    &copy; 2025 GTFS Server Indonesia | Dibuat oleh Vira
+    © 2025 GTFS Server Indonesia | Dibuat oleh Vira
   </footer>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
