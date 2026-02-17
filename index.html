@@ -4,128 +4,194 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Growtopia Fiki Server (GTFS)</title>
+
   <style>
+    :root {
+      --pink-main: #ff5fa2;
+      --pink-dark: #e6498f;
+      --pink-soft: #ffe6f0;
+      --text-dark: #333;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(#66ccff, #ffffff);
-      color: #333;
       margin: 0;
-      padding: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(180deg, #ffd6e8, #ffffff);
+      color: var(--text-dark);
       text-align: center;
     }
+
     header {
-      background-color: #0088cc;
+      background: linear-gradient(135deg, var(--pink-main), #ff8fc7);
       color: white;
-      padding: 1em 0;
+      padding: 30px 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
     }
+
+    nav {
+      margin-top: 10px;
+    }
+
     nav a {
-      margin: 0 15px;
       color: white;
       text-decoration: none;
-      font-weight: bold;
+      margin: 0 12px;
+      font-weight: 600;
+      transition: opacity 0.3s;
     }
+
+    nav a:hover {
+      opacity: 0.8;
+    }
+
     .logo {
       width: 260px;
       max-width: 90%;
-      margin-top: 15px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      border-radius: 16px;
+      margin: 15px 0;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
     }
+
     .container {
-      padding: 2em;
+      padding: 50px 20px;
     }
-    .button {
-      background-color: #0088cc;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 8px;
-      font-size: 1em;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      margin: 5px;
+
+    h1, h2, h3 {
+      margin-bottom: 10px;
     }
-    .button:hover {
-      background-color: #0066aa;
-    }
-    footer {
-      background-color: #f0f0f0;
-      padding: 1em;
-      font-size: 0.8em;
-    }
-    .how-to {
-      background: #f9f9f9;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      margin-top: 25px;
-      text-align: left;
+
+    p {
       max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: auto;
+      line-height: 1.6;
     }
+
+    .button {
+      display: inline-block;
+      margin: 8px;
+      padding: 12px 26px;
+      background: linear-gradient(135deg, var(--pink-main), #ff8fc7);
+      color: white;
+      border-radius: 999px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 6px 15px rgba(255,95,162,0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(255,95,162,0.5);
+      background: linear-gradient(135deg, var(--pink-dark), #ff78bb);
+    }
+
+    .how-to {
+      background: white;
+      border-radius: 18px;
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+      text-align: left;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .how-to h2 {
+      text-align: center;
+      color: var(--pink-main);
+    }
+
     .how-to h3 {
-      color: #0088cc;
+      color: var(--pink-dark);
+      margin-top: 30px;
     }
+
+    ol {
+      padding-left: 20px;
+    }
+
+    pre {
+      background: var(--pink-soft);
+      padding: 15px;
+      border-radius: 10px;
+      overflow-x: auto;
+      font-size: 0.9em;
+    }
+
     code {
-      background: #eee;
-      padding: 2px 4px;
-      border-radius: 4px;
+      background: var(--pink-soft);
+      padding: 3px 6px;
+      border-radius: 6px;
+    }
+
+    footer {
+      background: var(--pink-soft);
+      padding: 15px;
+      font-size: 0.85em;
+      color: #666;
+      margin-top: 40px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: inline-block;
+        margin: 6px;
+      }
     }
   </style>
 </head>
+
 <body>
 
-  <header>
-    <img src="gtfs.jpg" alt="GTFS Logo" class="logo" />
-    <h1>Growtopia Fiki Server (GTFS)</h1>
-    <nav>
-      <a href="#home">Beranda</a>
-      <a href="#how">Cara Bermain</a>
-      <a href="#community">Komunitas</a>
-      <a href="#download">Download</a>
-      <a href="#rules">Peraturan</a>
-    </nav>
-  </header>
+<header>
+  <img src="gtfs.jpg" alt="GTFS Logo" class="logo">
+  <h1>Growtopia Fiki Server</h1>
+  <nav>
+    <a href="#home">Beranda</a>
+    <a href="#how">Cara Bermain</a>
+    <a href="#community">Komunitas</a>
+    <a href="#download">Download</a>
+    <a href="#rules">Peraturan</a>
+  </nav>
+</header>
 
-  <!-- HOME -->
-  <div class="container" id="home">
-    <h2>Selamat Datang di GTFS!</h2>
-    <p>Server Private Growtopia gratis, stabil, dan ringan untuk semua pemain Indonesia!</p>
-    <img src="gtfs2.jpg" alt="GTFS Logo Bawah" class="logo" />
-  </div>
+<div class="container" id="home">
+  <h2>🌸 Selamat Datang di GTFS 🌸</h2>
+  <p>Server Private Growtopia gratis, stabil, ringan, dan dibuat khusus untuk pemain Indonesia.</p>
+  <img src="gtfs2.jpg" alt="GTFS Banner" class="logo">
+</div>
 
-  <!-- HOW TO PLAY -->
-  <div class="container" id="how">
-    <div class="how-to">
-      <h2>🎮 Cara Bermain GTFS</h2>
+<div class="container" id="how">
+  <div class="how-to">
+    <h2>🎮 Cara Bermain GTFS</h2>
 
-      <!-- WINDOWS -->
-      <h3>🖥️ How to Play on Windows:</h3>
-      <ol>
-        <li>Gunakan Growtopia versi terbaru.</li>
-        <li>Buka Notepad sebagai <b>Administrator</b>.</li>
-        <li>Buka file <code>hosts</code> di:
-          <br><code>%windir%\System32\drivers\etc</code>
-        </li>
-        <li>Paste teks ini:
-          <pre>
+    <h3>🖥️ Windows</h3>
+    <ol>
+      <li>Gunakan Growtopia versi terbaru.</li>
+      <li>Buka Notepad sebagai <b>Administrator</b>.</li>
+      <li>Buka file <code>hosts</code> di <code>%windir%\System32\drivers\etc</code>.</li>
+      <li>Paste:
+<pre>
 103.59.161.68 growtopia1.com
 103.59.161.68 growtopia2.com
 103.59.161.68 www.growtopia1.com
 103.59.161.68 www.growtopia2.com
-          </pre>
-        </li>
-        <li>Simpan → buka Growtopia → selesai 🎉</li>
-      </ol>
+</pre>
+      </li>
+      <li>Simpan → buka Growtopia → selesai 🎉</li>
+    </ol>
 
-      <!-- IOS -->
-      <h3>🍎 How to Play on iOS:</h3>
-      <ol>
-        <li>Download <b>Surge 4 / 5</b> dari AppStore.</li>
-        <li>Buka Surge → Click kiri atas.</li>
-        <li>Pilih <b>Edit (Text Mode)</b> lalu paste:
+    <h3>🍎 iOS</h3>
+    <ol>
+      <li>Download <b>Surge 4 / 5</b>.</li>
+      <li>Edit konfigurasi dan paste:
 <pre>
 [General]
 
@@ -138,66 +204,49 @@ www.growtopia1.com = 103.59.161.68
 growtopia2.com = 103.59.161.68
 growtopia1.com = 103.59.161.68
 </pre>
-        </li>
-        <li>Click Done → Start.</li>
-        <li>Buka Growtopia dan mainkan 🙂</li>
-      </ol>
+      </li>
+      <li>Start → buka Growtopia.</li>
+    </ol>
 
-      <!-- ANDROID -->
-      <h3>🤖 How to Play on Android (Ptunnel / GoTunnel):</h3>
-      <ol>
-        <li>Gunakan Growtopia versi terbaru.</li>
-        <li>Download PTunnel / GoTunnel.</li>
-        <li>Paste host file GTFS:
-          <br>
-          <a href="https://gtpshost.com/raw/GrowtopiaFS" target="_blank">
-            https://gtpshost.com/raw/GrowtopiaFS
-          </a>
-        </li>
-        <li>Start → buka Growtopia → Enjoy 🎉</li>
-      </ol>
-
-    </div>
+    <h3>🤖 Android</h3>
+    <ol>
+      <li>Gunakan PTunnel / vHost.</li>
+      <li>Paste host:
+        <br>
+        <a href="https://gtpshost.com/raw/GrowtopiaFS" target="_blank">
+          https://gtpshost.com/raw/GrowtopiaFS
+        </a>
+      </li>
+      <li>Start → Enjoy 🎉</li>
+    </ol>
   </div>
+</div>
 
-  <!-- COMMUNITY -->
-  <div class="container" id="community">
-    <h2>👥 Komunitas GTFS</h2>
-    <p>Bergabunglah bersama komunitas resmi kami:</p>
-    <a class="button" href="https://chat.whatsapp.com/KrgtZkXHXvH4SB6ge3GWK7" target="_blank">WhatsApp</a>
-    <a class="button" href="https://discord.gg/gee4MbcYxY" target="_blank">Discord</a>
-  </div>
+<div class="container" id="community">
+  <h2>👥 Komunitas</h2>
+  <a class="button" href="https://chat.whatsapp.com/KrgtZkXHXvH4SB6ge3GWK7" target="_blank">WhatsApp</a>
+  <a class="button" href="https://discord.gg/gee4MbcYxY" target="_blank">Discord</a>
+</div>
 
-  <!-- DOWNLOAD -->
-  <div class="container" id="download">
-    <h2>📥 Download Tools</h2>
-    <p>File penting untuk bermain GTFS:</p>
+<div class="container" id="download">
+  <h2>📥 Download</h2>
+  <a class="button" href="https://www.mediafire.com/file/iib8ux5kow7w6gx/gtfs.apk/file" target="_blank">Download APK</a>
+  <a class="button" href="https://gtpshost.com/raw/GrowtopiaFS" target="_blank">Raw Host</a>
+  <a class="button" href="https://gtpshost.com/d/GrowtopiaFS" target="_blank">All-in-One</a>
+</div>
 
-    <a class="button" href="https://www.mediafire.com/file/iib8ux5kow7w6gx/gtfs.apk/file" target="_blank">Download Apk Gtfs</a>
+<div class="container" id="rules">
+  <h2>📜 Peraturan</h2>
+  <ul style="max-width:600px;margin:auto;text-align:left;">
+    <li>Dilarang spam & scam.</li>
+    <li>Gunakan nama akun yang sopan.</li>
+    <li>Dilarang cheat selain mod resmi GTFS.</li>
+  </ul>
+</div>
 
-    <a class="button" href="https://gtpshost.com/raw/GrowtopiaFS" target="_blank">Raw Host GTFS</a>
-
-    <a class="button" href="https://gtpshost.com/d/GrowtopiaFS" target="_blank">All-in-one Host Link</a>
-  </div>
-
-  <!-- RULES -->
-  <div class="container" id="rules">
-    <h2>📜 Peraturan Server</h2>
-    <ul style="text-align:left; max-width: 600px; margin: auto;">
-      <li>Tidak boleh spam atau scam.</li>
-      <li>Gunakan nama akun sopan.</li>
-      <li>Dilarang menggunakan cheat selain mod resmi GTFS.</li>
-    </ul>
-  </div>
-
-  <footer>
-    © 2025 GTFS Server Indonesia | Dibuat oleh Vira
-  </footer>
+<footer>
+  © 2022 GTFS Server Indonesia • Made with vira💖
+</footer>
 
 </body>
 </html>
-
-
-
-
-
