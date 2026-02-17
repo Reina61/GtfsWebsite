@@ -75,13 +75,9 @@ nav a {
   box-shadow: 0 6px 15px rgba(255,95,162,.4);
 }
 
-.button:hover {
-  background: linear-gradient(135deg, var(--pink-dark), #ff78bb);
-}
-
 .card {
   background: white;
-  max-width: 850px;
+  max-width: 900px;
   margin: auto;
   text-align: left;
   padding: 30px;
@@ -154,7 +150,7 @@ footer {
   <img src="gtfs2.jpg" class="logo">
 </div>
 
-<!-- HOW -->
+<!-- HOW TO PLAY -->
 <div class="container" id="how">
   <div class="card">
     <h2 data-id="Cara Bermain"
@@ -162,6 +158,7 @@ footer {
         Cara Bermain
     </h2>
 
+    <!-- WINDOWS -->
     <h3>🖥️ Windows</h3>
     <ol>
       <li data-id="Gunakan Growtopia versi terbaru."
@@ -169,7 +166,7 @@ footer {
           Gunakan Growtopia versi terbaru.
       </li>
       <li data-id="Edit file hosts sebagai Administrator."
-          data-en="Edit hosts file as Administrator.">
+          data-en="Edit the hosts file as Administrator.">
           Edit file hosts sebagai Administrator.
       </li>
     </ol>
@@ -181,10 +178,56 @@ footer {
 103.59.161.68 www.growtopia2.com
 </pre>
 
+    <!-- IOS -->
+    <h3>🍎 iOS (Surge 4 / 5)</h3>
+    <ol>
+      <li data-id="Download Surge 4 atau Surge 5 dari App Store."
+          data-en="Download Surge 4 or Surge 5 from the App Store.">
+          Download Surge 4 atau Surge 5 dari App Store.
+      </li>
+      <li data-id="Buka Surge lalu tekan menu kiri atas."
+          data-en="Open Surge and tap the top-left menu.">
+          Buka Surge lalu tekan menu kiri atas.
+      </li>
+      <li data-id="Pilih Edit Configuration (Text Mode)."
+          data-en="Select Edit Configuration (Text Mode).">
+          Pilih Edit Configuration (Text Mode).
+      </li>
+      <li data-id="Paste konfigurasi berikut:"
+          data-en="Paste the following configuration:">
+          Paste konfigurasi berikut:
+      </li>
+    </ol>
+
+<pre>
+[General]
+
+[Rule]
+FINAL,DIRECT
+
+[Host]
+www.growtopia2.com = 103.59.161.68
+www.growtopia1.com = 103.59.161.68
+growtopia2.com = 103.59.161.68
+growtopia1.com = 103.59.161.68
+</pre>
+
+    <ol start="5">
+      <li data-id="Tekan Done lalu Start."
+          data-en="Tap Done then Start.">
+          Tekan Done lalu Start.
+      </li>
+      <li data-id="Buka Growtopia dan mainkan."
+          data-en="Open Growtopia and start playing.">
+          Buka Growtopia dan mainkan.
+      </li>
+    </ol>
+
+    <!-- ANDROID -->
     <h3>🤖 Android</h3>
-    <p data-id="Gunakan PTunnel / vHost dan paste host."
-       data-en="Use PTunnel / vHost and paste the host.">
-       Gunakan PTunnel / vHost dan paste host.
+    <p data-id="Gunakan PTunnel atau vHost lalu paste host berikut."
+       data-en="Use PTunnel or vHost then paste the host below.">
+       Gunakan PTunnel atau vHost lalu paste host berikut.
     </p>
 
     <a href="https://gtpshost.com/raw/GrowtopiaFS" target="_blank">
@@ -200,28 +243,16 @@ footer {
       Komunitas Kami
   </h2>
 
-  <a class="button" href="https://chat.whatsapp.com/KrgtZkXHXvH4SB6ge3GWK7" target="_blank">
-    WhatsApp
-  </a>
-  <a class="button" href="https://discord.gg/gee4MbcYxY" target="_blank">
-    Discord
-  </a>
+  <a class="button" href="https://chat.whatsapp.com/KrgtZkXHXvH4SB6ge3GWK7" target="_blank">WhatsApp</a>
+  <a class="button" href="https://discord.gg/gee4MbcYxY" target="_blank">Discord</a>
 </div>
 
 <!-- DOWNLOAD -->
 <div class="container" id="download">
-  <h2 data-id="Download"
-      data-en="Download">
-      Download
-  </h2>
+  <h2>Download</h2>
 
-  <a class="button" href="https://www.mediafire.com/file/iib8ux5kow7w6gx/gtfs.apk/file" target="_blank">
-    APK GTFS
-  </a>
-
-  <a class="button" href="https://gtpshost.com/raw/GrowtopiaFS" target="_blank">
-    Raw Host
-  </a>
+  <a class="button" href="https://www.mediafire.com/file/iib8ux5kow7w6gx/gtfs.apk/file" target="_blank">APK GTFS</a>
+  <a class="button" href="https://gtpshost.com/raw/GrowtopiaFS" target="_blank">Raw Host</a>
 </div>
 
 <!-- RULES -->
@@ -248,7 +279,7 @@ footer {
 </div>
 
 <footer>
-  © 2022 GTFS Server • Made with vira 💖
+  © 2022 GTFS Server • Made by vira💖
 </footer>
 
 <script>
